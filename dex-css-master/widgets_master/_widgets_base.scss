@@ -1,0 +1,283 @@
+.panel { 
+	font-family: 'Open Sans', 	sans-serif; 
+	font-weight: 300;
+	color: $medium-grey;
+	@include border-top-left-radius(6px);
+	@include border-top-right-radius(6px);
+
+	transition: opacity, border-color .7s ease-out;
+}
+
+.panel-heading { 
+	/* generic color - overwrite with platform-specific colors in appropriate SASS files */
+	background-color: white;
+	/*generic color - overwrite with platform-specific values */
+	color: $dark-grey; 
+	@include border-top-left-radius(6px);
+	@include border-top-right-radius(6px);
+	text-transform: uppercase;
+	padding: 15px;
+
+	>p { margin:0; display:inline; font-size:.925em; }
+
+	li:last-of-type { padding-right: 0; }
+
+	i { font-size: 1.2em; cursor:pointer; top: 0; }
+}
+
+.newly-added { opacity: 0 }
+
+.panel-footer { 
+	width: 100%; 
+	text-align: center; /* move this to html file */
+	padding: 0 15px; 
+
+	ul { margin: 0; opacity: .2; padding-bottom: 3px; }
+
+	li { margin:0 5px; font-size: 1.2em; }
+
+	li:last-of-type{ font-size: 1.5em; position: relative; top: 2px; }
+}
+
+.widgetContent {
+	>i { font-size: 1.2em; cursor:pointer; }
+
+	>p { padding-left:20px; }
+
+	>ul { font-size: .8em; color: $light-grey; }
+
+	hr { margin-top: 0; }
+}
+
+.widgetIcon { width: 22px; float:left; }
+
+.deployReset { padding-left: 0 !important; text-transform: uppercase; }
+
+.glyphicon-repeat { font-size: 1em !important; position: relative; }
+
+.groupSelect { margin-top: 20px; }
+
+.addGroupIcon { margin-right: 10px; }
+
+.startEndTime { 
+	position: relative; 
+	font-size: .8em; 
+	color: $light-grey; 
+	margin-top: 40px;
+
+	>div { width: 48%; }
+}
+
+.startTime, .endTime { 
+	background-color: $light-grey;
+	border: thin solid $medium-grey;
+	display: inline-block;
+	cursor: pointer;
+
+	.date { padding: 0; position: absolute; }
+
+	>div { 	display: inline-block; }
+}
+
+.timeText { padding-top:15px; font-weight:bold; color: $medium-grey; }
+
+.startTime { border-bottom: 7px solid #addfdc; }
+.endTime { border-bottom: 7px solid #f9c6c3; }
+
+.timeVal { padding: 0 24px; }
+
+.clockHolder { 
+	color: $medium-grey; 
+	font-size: 2em; 
+	border-right: thin solid $light-grey;
+	padding: 5px 15px;
+}
+
+.timeHeader { position: absolute; top: -25px; }
+
+.widgetButton { 
+	font-size: 1.2em;
+    font-weight: 400;
+    background-color: $medium-grey;
+    color: white;
+    padding: 12px;
+    cursor: pointer;
+
+    :hover {
+		background-color: $medium-grey !important;
+	    color: white !important;
+	}
+
+	:active { background-color: white; }
+}
+
+.dropdown-toggle { position: relative; }
+
+.widgetHeaderDrop { 
+	margin-top: 12px;
+	width: 200px;
+	right: -40px;
+
+	>li { text-transform: capitalize; }
+
+	>li>a { padding-left: 15px; color: $dark-grey;
+	}
+}
+
+.widgetMainDropTop { 
+	color: white; 
+	@include border-top-left-radius(8px);
+	@include border-top-right-radius(8px);
+
+	i { top: -20px; left: 72%; font-size: 2em; }
+}
+
+.popover {
+    min-width: 275px;
+    padding: 1px;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    font-size: .95em;
+
+    .popAddCancel li { padding: 10px 10px; color: rgb(255, 0, 0); cursor: pointer; }
+}
+
+.popover-title {
+    padding: 14px;
+    margin: 0;
+    font-size: 1em;
+    color:white;
+    background-color: $dark-grey !important;
+    border-bottom: 1px solid $light-grey;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.popover-content h1 { font-size: 5px; }
+
+.popClose { 
+	font-size: 1.8em; 
+	margin: 0; 
+	position: relative; 
+	top: -10px; 
+	cursor: pointer; 
+}
+
+.numText { width: 50px; }
+
+.popoverButtons {
+	width: 73px; 
+	padding: 5px 0; 
+	background-color: $anuc-burgundy; 
+	color: white; 
+	margin: 10px 0 20px 10px;
+	cursor: pointer;
+	@include border-radius(4px);
+}
+
+.popoverButtonsBlue { 
+	background-color: $light-blue;
+
+	:hover { background-color: $light-grey; }
+
+	.cancelButton:hover { background-color: $light-grey; }
+}
+
+.timeTitle { 
+	margin-bottom: 0;
+	font-size: .7em;
+	color: $medium-grey;
+}
+
+.panel-body { padding-top: 0; }
+
+.end { margin: 5px 0; }
+.end .time, .start .time { cursor: pointer; }
+.end .date, .start .date { cursor: default; }
+
+.panel-body {
+	hr, .panel-body hr:last-of-type { border-color: $light-grey; margin: 10px 0; }
+}
+
+.badge {
+    padding: 5px 7px;
+    font-size: 1.15em;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.list-group-item {
+    padding: 10px 5px;
+    border: 1px solid $light-grey;
+    font-size:.75em;
+}
+
+/* attempting to fix start / end time popovers */
+
+.setSchedule { 
+	margin-top: 18px;
+
+	.setDTButton { margin-bottom: 10px !important; }
+
+	.popover {
+		.close { font-size: 2em !important; margin-bottom: 5px; }
+		p { font-size: 1em; }
+		.date { padding: 0; }
+		.form-group { margin-bottom: 0; 
+		
+			input { 
+				width: 100%;
+				margin-top: 6px;
+				margin-bottom: 0; 
+				color: $dark-grey; 
+				font-family: "Open Sans";
+				text-align: center; /* move this to html */
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.startTime ~ .popover .date, .endTime ~ .popover .date { 
+	width: 100%;
+	font-size: 1.25em;
+	padding: 0;
+	text-align: center;
+}
+
+.setDTButton { 
+	text-align: center; margin-bottom: 5px; /* move text-align to html */
+
+	button { margin-top: 0; width: 100%; @include border-radius(5px); }
+	+ div { 
+		padding: 0;
+
+		button { margin-top: 0; border-radius: 5px; }
+	}
+}
+
+.setStartEndTimeText { 
+	text-align: center; /* move to html */
+	text-transform: uppercase;
+	margin: 8px 0 0;
+	font-size: .8em !important;
+	color: $medium-grey;
+}
+
+.popoverTable {
+	.form-group { margin-bottom: 0 !important; }
+	a { margin-right: 5px; }
+}
+
+// .popover .form-group div { margin-bottom: 5px; }
+
+.popover-content { padding-bottom: 0; cursor: default; }
+
+.previewArea { 
+	width: 100%; 
+    max-height: 180px;
+    min-height: 180px; /* min height always wins */
+}
+
+
+
+
+

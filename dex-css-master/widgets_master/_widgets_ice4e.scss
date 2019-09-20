@@ -1,0 +1,405 @@
+.imgContainer { 
+	position: relative;
+	@include border-top-left-radius(6px);
+	@include border-top-right-radius(6px);
+	border-bottom: thick solid $anuc-burgundy;
+
+	>img {
+		@include border-top-left-radius(6px);
+		@include border-top-right-radius(6px);
+	}
+}
+
+.groupsPopIcon { 
+	width: 15px;
+	border: none !important;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.groupsList { 
+	margin-bottom: 0;
+
+	p { padding-left: 2px; display: inline; }
+	p:first-child { padding-left: 0; }
+
+	input { 
+		width: 100%;
+		border: thin solid $medium-grey;
+		@include border-radius(5px);
+		font-size: .85em;
+		padding: 12px 0 12px 5px;
+		margin: 5px 0 15px 0;
+	}
+
+	select { margin-bottom: 10px; }
+}
+
+.addMatesIcon { 
+	color: $dark-grey; 
+	font-size: 1.25em !important; 
+	display: inline-block;
+}
+
+#addMates + .btn-group, #addMates + .btn-group > button { width: 100%; }
+#addMates + .btn-group button { 
+	text-align: left; 
+	overflow: hidden;
+	color: $medium-grey;
+	margin-top: 5px;
+
+	> b { 
+		position: absolute;
+		margin-right: 10px; 
+		right: 0;
+		top: 12px;
+		width: 10px;
+		height: 10px; 
+	}
+}
+
+#addMates + .btn-group > .dropdown-menu { 
+	width: 100%;
+	margin-top: 0; 
+	padding-bottom: 0;
+
+	label { font-weight: normal; }
+
+	>li>a { padding: 6px 0; }
+
+	.checkbox { 
+		margin-top: 0; margin-bottom: 0;
+
+		input[type=checkbox] { 
+			position: relative; 
+			margin-left: 10px;
+			margin-right: 10px;
+			top: -2px;
+		} 
+	}
+}
+
+.wgHamburger ~ .popover .popoverButtonsBlue { 
+	width: 48%; 
+	display: inline-block;
+	margin-left: 0;
+	margin-bottom: 15px;
+}
+
+.groupCourseSelect { width: 100%; margin-bottom: 10px; }
+
+.fbPanel { 
+	.popover-title { text-transform: uppercase; }
+}
+
+.profWidgetHeading {
+    background-color: white !important;
+    color: $dark-grey !important;
+    @include border-top-left-radius(0);
+    @include border-top-right-radius(0);
+    text-transform: capitalize;
+    border-bottom: 2px solid $medium-grey;
+    padding: 15px 15px 0 15px;
+
+    img {
+		max-width: 35px;
+		position:relative;
+		top: 5px;
+		margin-right: 10px; 
+	}
+
+	>.popover { width: 200px !important; }
+	.popover-content { padding: 0 0 10px 0; margin-bottom: 10px; }
+	.popover-title { text-align: center; }
+
+	p { line-height: 1; color: $medium-grey; margin-left: 2px; }
+
+	h4 { 
+		color: $medium-grey; 
+		margin: 5px 0 8px 40px;
+		width: 85%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		cursor: default;		
+		position: relative;
+    	top: -6px;
+    	padding-bottom: 3px;
+	}
+
+	span { font-size: 1.4em; }
+	i { font-size: 1.5em; }
+}
+
+.profWidget { 
+	background-color: $off-white;
+	border: thin solid darken($off-white, 5%);
+	@include border-radius(2px);
+	color: $medium-grey;
+	padding: 0;
+	cursor: pointer;
+    margin-top: 10px;
+
+    h4 { font-size: 1em; margin: 0; line-height: 3em; }
+    span { font-size: 1.3em; color: $medium-grey; }
+}
+
+.profShare { 
+	background-color: $light-grey; 
+	border: thin solid darken($light-grey, 10%);
+	color: $medium-grey;
+}
+
+[data-target="#feedbackModal"] { 
+	font-size: 1em !important;
+	margin-top: 10px;
+	cursor: pointer;
+	display: inline-block;
+
+	i { margin-right: 10px; font-size: 1.5em; }
+	:hover, ~i:hover { color: darken($medium-grey, 15%); } 
+}
+
+.more-content-wrapper { max-height: 0; transition: max-height .8s; overflow: hidden; }
+
+.show-widget-content { max-height: 310px; }
+.hide-widget-content { max-height: 0; }
+
+.widget-controls {
+	position: relative;
+	margin: 8px 0 0 0;
+	
+	i { cursor: pointer; }
+	li { padding: 0; }
+	.fa-share-alt { font-size: 1.35em !important; position: relative; top: 2px; cursor: pointer; }
+}
+
+.expand-cp-widget { 
+	font-size: 1.35em !important; 
+	position: absolute; 
+	cursor: pointer;
+	top: 10px;  
+	right: 15px; 
+	padding: 0 !important;
+}
+
+.widget-header-controls { 
+	color: $medium-grey;
+	font-size: .875em;
+
+	li { padding: 0; }
+	li:hover { color: darken($medium-grey, 15%); }
+	.fa-edit, .fa-eye { position: relative; top: 1px; padding-right: 5px; }
+	.fa-eye { top: 0; }
+}
+
+.editQuizIcon { 
+	width: 43px; 
+	display: inline-block;
+	padding-left: 16px;
+	position: relative;
+	top: 2px;
+	color: inherit;
+
+	+ div {  
+		display: inline-block;
+		border-left: thin solid $light-grey;
+		padding-left: 10px;
+
+		h4 { font-family: "Open Sans"; font-weight: 300 !important; }
+	}
+}
+
+.notificationControl { 
+	font-size: 1em;
+	display: inline-block;
+	cursor: pointer;
+	padding-left: 16px;
+	color: $medium-grey;
+
+	i  { 
+		margin-right: 8px; 
+		font-size: 1.3em;
+		position: relative;
+		top: 2px;
+	}
+}
+
+.showNotificationPanel { max-height: 300px; }
+
+.notificationDisabled { opacity: .35; cursor: default; }
+
+.notificationPanel { 
+	max-height: 0; 
+	overflow: hidden;
+	transition: all 2s ease;
+
+	.fa-trash { cursor: pointer; }
+	textarea { height: 90px; }
+	select { color: $medium-grey; margin-bottom: 20px; }
+	h5 { font-size: .8em; color: $medium-grey; margin-top: 0; }
+}
+
+.studentInfo {
+	>div {
+		float:left;
+		width: 33.333%;
+		text-align: center;
+		padding-top:10px;
+	}
+
+	>div:first-child { 
+		border-top: 3px solid $medium-yellow;
+		border-right: 2px solid $light-grey;
+	}
+
+	>div:nth-child(2) { 
+		border-top: 3px solid darken($medium-yellow, 10%);
+		border-right: 2px solid $light-grey;
+	}
+
+	>div:nth-child(3) { border-top: 3px solid darken($medium-yellow, 15%); }
+
+	p { 
+		font-size:.9em; 
+		line-height:1.5; 
+		margin: 10px 0;
+		cursor: pointer;
+		display: inline-block;
+
+		>span { font-size: 1.2em; font-weight: 900; }
+	}
+
+	+ .panel-body { padding-top: 10px; }
+}
+
+.studentInfoSecondary hr { margin-bottom: 0; }
+
+.profSecondary { position: relative; top: 30px; }
+
+.linker { z-index: 0; }
+
+.profPop { 
+	display: inline-block;  
+	width: 49.5%; 
+	background-color: $dark-grey; 
+	cursor: pointer; 
+	text-align: center; /* move this to html */
+	color: white;
+	padding: 5px 0;
+	margin-bottom: 10px;
+}
+
+
+
+.managerItem {
+    background-color: $off-white;
+    border: thin solid darken($off-white, 10%);
+    color: $medium-grey;
+    margin-bottom: 10px;
+
+    div { display:inline-block; }
+    >i { margin: 5px 5px 0 0; cursor: pointer; font-size: 1.15em; }
+    .fa-film { font-size: .82em; }
+}
+
+.managerIcon {
+    width: 15%;
+    text-align: center;
+    font-size: 1.7em;
+    padding: 12px 5px;
+}
+
+.assetTagType {
+    font-size: .75em;
+    line-height: 1;
+    word-wrap: break-word;
+    padding: 5px 0 0 10px;
+    border-left: thin solid $light-grey;
+    width: 80%;
+    padding-bottom: 5px;
+
+    h4 { font-size: inherit; font-weight: 700; }
+    p { display: inline-block; }
+}
+
+.uploadIcon { font-size: 2.25em !important; margin-right: 15px; margin-top: 8px; }
+
+.managerHRTop { margin-top: 0; }
+
+.managerBadge { width: 35%; }
+
+.managerGroupList {
+    width: 70%;
+    margin-left: 15px;
+    margin-top:15px;
+    margin-bottom: 0;
+    font-size: 1.25em !important;
+
+    i { margin: 0 10px; font-size: 1.5em; }
+}
+
+.fileDivColors > div { border-right:none !important; }
+
+.asset-wrapper { 
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.fmCourseCode { 
+	margin: 0; 
+	display: inline-block; 
+	font-size: .925em !important;
+}
+
+.fmCourseName {
+	margin: 0 0 10px 0;
+	display: inline-block; 
+	font-size: 1.15em !important;
+}
+
+.fa-compress, .fa-expand { 
+	color: $medium-grey !important; 
+	padding: 3px; 
+	@include border-radius(2px);
+	cursor: pointer;
+	font-size: 1.25em !important;
+}
+
+.addWidget .glyphicon { margin-right: 6px; }
+
+/* ----- admin widget styles ----- */
+
+/* override ICE4M panel heading style -> need to add this class to panel header panels in ICE4M project */
+
+.adminHeading { 
+	background-color: $anuc-burgundy !important;
+	color: white !important;
+
+	h5 { 
+		margin: 0;
+	    display: inline-block;
+	    width: 85%;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	}
+
+	~ .panel-body { padding-top: 10px !important; }
+}
+
+.create-group-container { position: relative; }
+
+.social-group-create { position: absolute; right: 15px; top: 8px; }
+
+.group-create-area { width: 85%; }
+
+.delete-new-group { 
+	position: absolute;
+	right: 29px;
+	padding-top: 3px;
+    font-size: 1.5em !important;
+}
+
+.newly-added { opacity: 0; }

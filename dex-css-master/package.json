@@ -1,0 +1,32 @@
+{
+  "name": "dex-css-master",
+  "version": "0.0.1",
+  "author": {
+    "name": "Digital Engagement Experience"
+  },
+  "contributors": "Trevor Van Rys",
+  "description": "master css and SCSS files for ICE products",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:dexinc/dex-css-master.git"
+  },
+  "keywords": [
+    "css",
+    "scss",
+    "compass",
+    "sass",
+    "grunt"
+  ],
+  "license": "MIT",
+  "readme": "## Synopsis\n\nA repo for tracking and maintaining the presentation layer code - all CSS that relates to a particular vertical (or product) will live here, be edited here, and be compiled from here\n\n## Code Example\n~~~\n@import \"nameOfSCSSfile\"\n~~~\n- imports modular SCSS files into a master for each (for example importing widget styles into the ICE4E master file)\n\n~~~\n$variablename\n~~~ \n- create variables for re-use inside of SCSS files\n\n## Motivation\n\nCompiling and storing base SCSS files will help maintain a clean codebase. Styles should be modular and organized according to 1) vertical and 2) feature and be implemented as necessary. All SCSS should be compiled via Compass and Grunt into a single CSS file per deployment.\n\n## Installation\n\nSASS and Compass are dependencies for development. Both require Ruby.\n\nSASS install: http://sass-lang.com/install\n\nCompass install: http://compass-style.org/install/\n\n## API Reference\n\nSASS: http://sass-lang.com/documentation/file.SASS_REFERENCE.html\n\nCompass: http://compass-style.org/help/documentation/\n\n## Using Compass with Grunt\n\nuse grunt-contrib-compass and grunt-contrib-watch in development to edit and compile SCSS files to the master CSS directory (some configuration may be required) \n\nhttps://github.com/gruntjs/grunt-contrib-compass (includes sample files and examples)\n\nhttps://github.com/gruntjs/grunt-contrib-watch\n\nUsing Terminal: cd to project; run Grunt watch",
+  "readmeFilename": "README.md",
+  "gitHead": "907bdc95dcd0c0ea857cb0c5ad60889b7d843b8c",
+  "_id": "dex-css-master@0.0.1",
+  "_shasum": "8c3c7ab1ab44894dafe2f77f3bd8173bc374659f",
+  "_from": "git+ssh://git@bitbucket.org/dexinc/dex-css-master.git",
+  "_resolved": "git+ssh://git@bitbucket.org/dexinc/dex-css-master.git#907bdc95dcd0c0ea857cb0c5ad60889b7d843b8c"
+}

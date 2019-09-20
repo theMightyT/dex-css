@@ -1,0 +1,36 @@
+/* font stack */
+$main-font: 'Oxygen', sans-serif;
+$default-font-size: 16px;
+
+/* mixins - column collapse, border radii, etc */
+
+/* ICE4M colors */
+$anuc-burgundy: #690800;
+$body-bg: #505050;
+$dark-grey: #444;
+$medium-grey: #999;
+$light-grey: #ccc;
+$off-white: #f3f3f3;
+$blue-grey: #b7bbc2;
+$bright-green: #7CCB7C;
+$light-green: #9FC7B1;
+$medium-yellow: #eaea26;
+$dark-yellow: #d6b600;
+$nav-bar: #f3d83f;
+$medium-blue: #86BCD1;
+$light-blue: #b9d9e5;
+
+/* dasboard box shadow */
+
+@mixin db-box-shadow {
+	@include box-shadow(lighten($light-grey, 5%) 0 2px 4px 3px);
+}
+
+@mixin no-select ($value: none) {
+	-webkit-user-select: $value;
+	   -moz-user-select: $value;
+	    -ms-user-select: $value;
+	        user-select: $value;
+}
+
+/* ICE4E modal globals */
